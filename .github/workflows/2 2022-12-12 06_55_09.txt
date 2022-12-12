@@ -1,0 +1,1101 @@
+2022-12-10T11:29:05.7541575Z Requested labels: ubuntu-latest
+2022-12-10T11:29:05.7541628Z Job defined at: github/opensource.guide/.github/workflows/tests.yml@refs/pull/2953/merge
+2022-12-10T11:29:05.7541650Z Waiting for a runner to pick up this job...
+2022-12-10T11:29:06.0805114Z Job is waiting for a hosted runner to come online.
+2022-12-10T11:29:09.0911872Z Job is about to start running on the hosted runner: GitHub Actions 12 (hosted)
+2022-12-10T11:29:13.4862040Z Current runner version: '2.299.1'
+2022-12-10T11:29:13.4887291Z ##[group]Operating System
+2022-12-10T11:29:13.4887827Z Ubuntu
+2022-12-10T11:29:13.4888075Z 22.04.1
+2022-12-10T11:29:13.4888423Z LTS
+2022-12-10T11:29:13.4888702Z ##[endgroup]
+2022-12-10T11:29:13.4888968Z ##[group]Runner Image
+2022-12-10T11:29:13.4889327Z Image: ubuntu-22.04
+2022-12-10T11:29:13.4889642Z Version: 20221204.2
+2022-12-10T11:29:13.4890183Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20221204.2/images/linux/Ubuntu2204-Readme.md
+2022-12-10T11:29:13.4890779Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20221204.2
+2022-12-10T11:29:13.4891215Z ##[endgroup]
+2022-12-10T11:29:13.4891562Z ##[group]Runner Image Provisioner
+2022-12-10T11:29:13.4891854Z 2.0.91.1
+2022-12-10T11:29:13.4892162Z ##[endgroup]
+2022-12-10T11:29:13.4893120Z ##[group]GITHUB_TOKEN Permissions
+2022-12-10T11:29:13.4893711Z Actions: read
+2022-12-10T11:29:13.4893966Z Checks: read
+2022-12-10T11:29:13.4894448Z Contents: read
+2022-12-10T11:29:13.4894790Z Deployments: read
+2022-12-10T11:29:13.4895101Z Discussions: read
+2022-12-10T11:29:13.4895410Z Issues: read
+2022-12-10T11:29:13.4895701Z Metadata: read
+2022-12-10T11:29:13.4895971Z Packages: read
+2022-12-10T11:29:13.4896264Z Pages: read
+2022-12-10T11:29:13.4896567Z PullRequests: read
+2022-12-10T11:29:13.4896888Z RepositoryProjects: read
+2022-12-10T11:29:13.4897229Z SecurityEvents: read
+2022-12-10T11:29:13.4897555Z Statuses: read
+2022-12-10T11:29:13.4897804Z ##[endgroup]
+2022-12-10T11:29:13.4901380Z Secret source: None
+2022-12-10T11:29:13.4901921Z Prepare workflow directory
+2022-12-10T11:29:13.5716325Z Prepare all required actions
+2022-12-10T11:29:13.5898415Z Getting action download info
+2022-12-10T11:29:14.1825143Z Download action repository 'actions/checkout@v3' (SHA:93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8)
+2022-12-10T11:29:14.8788828Z Download action repository 'ruby/setup-ruby@v1' (SHA:ee2113536afb7f793eed4ce60e8d3b26db912da4)
+2022-12-10T11:29:15.5101021Z Download action repository 'actions/setup-node@v3' (SHA:8c91899e586c5b171469028077307d293428b516)
+2022-12-10T11:29:16.3404238Z ##[group]Run actions/checkout@v3
+2022-12-10T11:29:16.3404509Z with:
+2022-12-10T11:29:16.3404733Z   repository: github/opensource.guide
+2022-12-10T11:29:16.3405117Z   token: ***
+2022-12-10T11:29:16.3405304Z   ssh-strict: true
+2022-12-10T11:29:16.3405520Z   persist-credentials: true
+2022-12-10T11:29:16.3405783Z   clean: true
+2022-12-10T11:29:16.3405967Z   fetch-depth: 1
+2022-12-10T11:29:16.3406147Z   lfs: false
+2022-12-10T11:29:16.3406331Z   submodules: false
+2022-12-10T11:29:16.3406530Z   set-safe-directory: true
+2022-12-10T11:29:16.3406737Z ##[endgroup]
+2022-12-10T11:29:16.5792121Z Syncing repository: github/opensource.guide
+2022-12-10T11:29:16.5793907Z ##[group]Getting Git version info
+2022-12-10T11:29:16.5794404Z Working directory is '/home/runner/work/opensource.guide/opensource.guide'
+2022-12-10T11:29:16.5794932Z [command]/usr/bin/git version
+2022-12-10T11:29:16.5893296Z git version 2.38.1
+2022-12-10T11:29:16.5919512Z ##[endgroup]
+2022-12-10T11:29:16.5936506Z Temporarily overriding HOME='/home/runner/work/_temp/164785c1-e13a-4300-8daa-93e64b8bf971' before making global git config changes
+2022-12-10T11:29:16.5938249Z Adding repository directory to the temporary git global config as a safe directory
+2022-12-10T11:29:16.5943775Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/opensource.guide/opensource.guide
+2022-12-10T11:29:16.5989065Z Deleting the contents of '/home/runner/work/opensource.guide/opensource.guide'
+2022-12-10T11:29:16.5994970Z ##[group]Initializing the repository
+2022-12-10T11:29:16.5999506Z [command]/usr/bin/git init /home/runner/work/opensource.guide/opensource.guide
+2022-12-10T11:29:16.6065951Z hint: Using 'master' as the name for the initial branch. This default branch name
+2022-12-10T11:29:16.6066493Z hint: is subject to change. To configure the initial branch name to use in all
+2022-12-10T11:29:16.6067150Z hint: of your new repositories, which will suppress this warning, call:
+2022-12-10T11:29:16.6067712Z hint: 
+2022-12-10T11:29:16.6068557Z hint: 	git config --global init.defaultBranch <name>
+2022-12-10T11:29:16.6068896Z hint: 
+2022-12-10T11:29:16.6069680Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2022-12-10T11:29:16.6070201Z hint: 'development'. The just-created branch can be renamed via this command:
+2022-12-10T11:29:16.6070620Z hint: 
+2022-12-10T11:29:16.6072706Z hint: 	git branch -m <name>
+2022-12-10T11:29:16.6082023Z Initialized empty Git repository in /home/runner/work/opensource.guide/opensource.guide/.git/
+2022-12-10T11:29:16.6091047Z [command]/usr/bin/git remote add origin https://github.com/github/opensource.guide
+2022-12-10T11:29:16.6128796Z ##[endgroup]
+2022-12-10T11:29:16.6129362Z ##[group]Disabling automatic garbage collection
+2022-12-10T11:29:16.6134623Z [command]/usr/bin/git config --local gc.auto 0
+2022-12-10T11:29:16.6164440Z ##[endgroup]
+2022-12-10T11:29:16.6165116Z ##[group]Setting up auth
+2022-12-10T11:29:16.6172926Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2022-12-10T11:29:16.6205147Z [command]/usr/bin/git submodule foreach --recursive git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :
+2022-12-10T11:29:16.6506255Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2022-12-10T11:29:16.6533246Z [command]/usr/bin/git submodule foreach --recursive git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :
+2022-12-10T11:29:16.6748657Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2022-12-10T11:29:16.6780538Z ##[endgroup]
+2022-12-10T11:29:16.6781221Z ##[group]Fetching the repository
+2022-12-10T11:29:16.6790141Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +8f3b90572a88f0a648584a3ba5cbcb56fa5fe9f5:refs/remotes/pull/2953/merge
+2022-12-10T11:29:17.0206798Z remote: Enumerating objects: 668, done.        
+2022-12-10T11:29:17.0224253Z remote: Counting objects:   0% (1/668)        
+2022-12-10T11:29:17.0225009Z remote: Counting objects:   1% (7/668)        
+2022-12-10T11:29:17.0225376Z remote: Counting objects:   2% (14/668)        
+2022-12-10T11:29:17.0225628Z remote: Counting objects:   3% (21/668)        
+2022-12-10T11:29:17.0226595Z remote: Counting objects:   4% (27/668)        
+2022-12-10T11:29:17.0226984Z remote: Counting objects:   5% (34/668)        
+2022-12-10T11:29:17.0227591Z remote: Counting objects:   6% (41/668)        
+2022-12-10T11:29:17.0228096Z remote: Counting objects:   7% (47/668)        
+2022-12-10T11:29:17.0229243Z remote: Counting objects:   8% (54/668)        
+2022-12-10T11:29:17.0229953Z remote: Counting objects:   9% (61/668)        
+2022-12-10T11:29:17.0230701Z remote: Counting objects:  10% (67/668)        
+2022-12-10T11:29:17.0231381Z remote: Counting objects:  11% (74/668)        
+2022-12-10T11:29:17.0232146Z remote: Counting objects:  12% (81/668)        
+2022-12-10T11:29:17.0232894Z remote: Counting objects:  13% (87/668)        
+2022-12-10T11:29:17.0233638Z remote: Counting objects:  14% (94/668)        
+2022-12-10T11:29:17.0335708Z remote: Counting objects:  15% (101/668)        
+2022-12-10T11:29:17.0336273Z remote: Counting objects:  16% (107/668)        
+2022-12-10T11:29:17.0336680Z remote: Counting objects:  17% (114/668)        
+2022-12-10T11:29:17.0337165Z remote: Counting objects:  18% (121/668)        
+2022-12-10T11:29:17.0337724Z remote: Counting objects:  19% (127/668)        
+2022-12-10T11:29:17.0338185Z remote: Counting objects:  20% (134/668)        
+2022-12-10T11:29:17.0338651Z remote: Counting objects:  21% (141/668)        
+2022-12-10T11:29:17.0339129Z remote: Counting objects:  22% (147/668)        
+2022-12-10T11:29:17.0339596Z remote: Counting objects:  23% (154/668)        
+2022-12-10T11:29:17.0340248Z remote: Counting objects:  24% (161/668)        
+2022-12-10T11:29:17.0340730Z remote: Counting objects:  25% (167/668)        
+2022-12-10T11:29:17.0341204Z remote: Counting objects:  26% (174/668)        
+2022-12-10T11:29:17.0341791Z remote: Counting objects:  27% (181/668)        
+2022-12-10T11:29:17.0342300Z remote: Counting objects:  28% (188/668)        
+2022-12-10T11:29:17.0343412Z remote: Counting objects:  29% (194/668)        
+2022-12-10T11:29:17.0343795Z remote: Counting objects:  30% (201/668)        
+2022-12-10T11:29:17.0344373Z remote: Counting objects:  31% (208/668)        
+2022-12-10T11:29:17.0345030Z remote: Counting objects:  32% (214/668)        
+2022-12-10T11:29:17.0345685Z remote: Counting objects:  33% (221/668)        
+2022-12-10T11:29:17.0346326Z remote: Counting objects:  34% (228/668)        
+2022-12-10T11:29:17.0346958Z remote: Counting objects:  35% (234/668)        
+2022-12-10T11:29:17.0347535Z remote: Counting objects:  36% (241/668)        
+2022-12-10T11:29:17.0348163Z remote: Counting objects:  37% (248/668)        
+2022-12-10T11:29:17.0348797Z remote: Counting objects:  38% (254/668)        
+2022-12-10T11:29:17.0349371Z remote: Counting objects:  39% (261/668)        
+2022-12-10T11:29:17.0350052Z remote: Counting objects:  40% (268/668)        
+2022-12-10T11:29:17.0350709Z remote: Counting objects:  41% (274/668)        
+2022-12-10T11:29:17.0351321Z remote: Counting objects:  42% (281/668)        
+2022-12-10T11:29:17.0351918Z remote: Counting objects:  43% (288/668)        
+2022-12-10T11:29:17.0352556Z remote: Counting objects:  44% (294/668)        
+2022-12-10T11:29:17.0353152Z remote: Counting objects:  45% (301/668)        
+2022-12-10T11:29:17.0353813Z remote: Counting objects:  46% (308/668)        
+2022-12-10T11:29:17.0354473Z remote: Counting objects:  47% (314/668)        
+2022-12-10T11:29:17.0355097Z remote: Counting objects:  48% (321/668)        
+2022-12-10T11:29:17.0355727Z remote: Counting objects:  49% (328/668)        
+2022-12-10T11:29:17.0356339Z remote: Counting objects:  50% (334/668)        
+2022-12-10T11:29:17.0357186Z remote: Counting objects:  51% (341/668)        
+2022-12-10T11:29:17.0357519Z remote: Counting objects:  52% (348/668)        
+2022-12-10T11:29:17.0358179Z remote: Counting objects:  53% (355/668)        
+2022-12-10T11:29:17.0358820Z remote: Counting objects:  54% (361/668)        
+2022-12-10T11:29:17.0359501Z remote: Counting objects:  55% (368/668)        
+2022-12-10T11:29:17.0360136Z remote: Counting objects:  56% (375/668)        
+2022-12-10T11:29:17.0360834Z remote: Counting objects:  57% (381/668)        
+2022-12-10T11:29:17.0361523Z remote: Counting objects:  58% (388/668)        
+2022-12-10T11:29:17.0362206Z remote: Counting objects:  59% (395/668)        
+2022-12-10T11:29:17.0362866Z remote: Counting objects:  60% (401/668)        
+2022-12-10T11:29:17.0363538Z remote: Counting objects:  61% (408/668)        
+2022-12-10T11:29:17.0364231Z remote: Counting objects:  62% (415/668)        
+2022-12-10T11:29:17.0364956Z remote: Counting objects:  63% (421/668)        
+2022-12-10T11:29:17.0365677Z remote: Counting objects:  64% (428/668)        
+2022-12-10T11:29:17.0366310Z remote: Counting objects:  65% (435/668)        
+2022-12-10T11:29:17.0366954Z remote: Counting objects:  66% (441/668)        
+2022-12-10T11:29:17.0367698Z remote: Counting objects:  67% (448/668)        
+2022-12-10T11:29:17.0368275Z remote: Counting objects:  68% (455/668)        
+2022-12-10T11:29:17.0368992Z remote: Counting objects:  69% (461/668)        
+2022-12-10T11:29:17.0369661Z remote: Counting objects:  70% (468/668)        
+2022-12-10T11:29:17.0370332Z remote: Counting objects:  71% (475/668)        
+2022-12-10T11:29:17.0371009Z remote: Counting objects:  72% (481/668)        
+2022-12-10T11:29:17.0371675Z remote: Counting objects:  73% (488/668)        
+2022-12-10T11:29:17.0372335Z remote: Counting objects:  74% (495/668)        
+2022-12-10T11:29:17.0373053Z remote: Counting objects:  75% (501/668)        
+2022-12-10T11:29:17.0373753Z remote: Counting objects:  76% (508/668)        
+2022-12-10T11:29:17.0413383Z remote: Counting objects:  77% (515/668)        
+2022-12-10T11:29:17.0414263Z remote: Counting objects:  78% (522/668)        
+2022-12-10T11:29:17.0414778Z remote: Counting objects:  79% (528/668)        
+2022-12-10T11:29:17.0415497Z remote: Counting objects:  80% (535/668)        
+2022-12-10T11:29:17.0416200Z remote: Counting objects:  81% (542/668)        
+2022-12-10T11:29:17.0416923Z remote: Counting objects:  82% (548/668)        
+2022-12-10T11:29:17.0417600Z remote: Counting objects:  83% (555/668)        
+2022-12-10T11:29:17.0418286Z remote: Counting objects:  84% (562/668)        
+2022-12-10T11:29:17.0418979Z remote: Counting objects:  85% (568/668)        
+2022-12-10T11:29:17.0419639Z remote: Counting objects:  86% (575/668)        
+2022-12-10T11:29:17.0420326Z remote: Counting objects:  87% (582/668)        
+2022-12-10T11:29:17.0420989Z remote: Counting objects:  88% (588/668)        
+2022-12-10T11:29:17.0421665Z remote: Counting objects:  89% (595/668)        
+2022-12-10T11:29:17.0422331Z remote: Counting objects:  90% (602/668)        
+2022-12-10T11:29:17.0423005Z remote: Counting objects:  91% (608/668)        
+2022-12-10T11:29:17.0423681Z remote: Counting objects:  92% (615/668)        
+2022-12-10T11:29:17.0424369Z remote: Counting objects:  93% (622/668)        
+2022-12-10T11:29:17.0425096Z remote: Counting objects:  94% (628/668)        
+2022-12-10T11:29:17.0425811Z remote: Counting objects:  95% (635/668)        
+2022-12-10T11:29:17.0426496Z remote: Counting objects:  96% (642/668)        
+2022-12-10T11:29:17.0427218Z remote: Counting objects:  97% (648/668)        
+2022-12-10T11:29:17.0427917Z remote: Counting objects:  98% (655/668)        
+2022-12-10T11:29:17.0428657Z remote: Counting objects:  99% (662/668)        
+2022-12-10T11:29:17.0429341Z remote: Counting objects: 100% (668/668)        
+2022-12-10T11:29:17.0430090Z remote: Counting objects: 100% (668/668), done.        
+2022-12-10T11:29:17.0430824Z remote: Compressing objects:   0% (1/558)        
+2022-12-10T11:29:17.0431528Z remote: Compressing objects:   1% (6/558)        
+2022-12-10T11:29:17.0431874Z remote: Compressing objects:   2% (12/558)        
+2022-12-10T11:29:17.0432598Z remote: Compressing objects:   3% (17/558)        
+2022-12-10T11:29:17.0433334Z remote: Compressing objects:   4% (23/558)        
+2022-12-10T11:29:17.0434021Z remote: Compressing objects:   5% (28/558)        
+2022-12-10T11:29:17.0434726Z remote: Compressing objects:   6% (34/558)        
+2022-12-10T11:29:17.0435464Z remote: Compressing objects:   7% (40/558)        
+2022-12-10T11:29:17.0436202Z remote: Compressing objects:   8% (45/558)        
+2022-12-10T11:29:17.0436923Z remote: Compressing objects:   9% (51/558)        
+2022-12-10T11:29:17.0437621Z remote: Compressing objects:  10% (56/558)        
+2022-12-10T11:29:17.0438316Z remote: Compressing objects:  11% (62/558)        
+2022-12-10T11:29:17.0439045Z remote: Compressing objects:  12% (67/558)        
+2022-12-10T11:29:17.0439734Z remote: Compressing objects:  13% (73/558)        
+2022-12-10T11:29:17.0440565Z remote: Compressing objects:  14% (79/558)        
+2022-12-10T11:29:17.0441296Z remote: Compressing objects:  15% (84/558)        
+2022-12-10T11:29:17.0442020Z remote: Compressing objects:  16% (90/558)        
+2022-12-10T11:29:17.0442719Z remote: Compressing objects:  17% (95/558)        
+2022-12-10T11:29:17.0443449Z remote: Compressing objects:  18% (101/558)        
+2022-12-10T11:29:17.0444181Z remote: Compressing objects:  19% (107/558)        
+2022-12-10T11:29:17.0444900Z remote: Compressing objects:  20% (112/558)        
+2022-12-10T11:29:17.0445695Z remote: Compressing objects:  21% (118/558)        
+2022-12-10T11:29:17.0446406Z remote: Compressing objects:  22% (123/558)        
+2022-12-10T11:29:17.0447115Z remote: Compressing objects:  23% (129/558)        
+2022-12-10T11:29:17.0447833Z remote: Compressing objects:  24% (134/558)        
+2022-12-10T11:29:17.0448549Z remote: Compressing objects:  25% (140/558)        
+2022-12-10T11:29:17.0448977Z remote: Compressing objects:  26% (146/558)        
+2022-12-10T11:29:17.0561889Z remote: Compressing objects:  27% (151/558)        
+2022-12-10T11:29:17.0562288Z remote: Compressing objects:  28% (157/558)        
+2022-12-10T11:29:17.0563187Z remote: Compressing objects:  29% (162/558)        
+2022-12-10T11:29:17.0563721Z remote: Compressing objects:  30% (168/558)        
+2022-12-10T11:29:17.0564458Z remote: Compressing objects:  31% (173/558)        
+2022-12-10T11:29:17.0565234Z remote: Compressing objects:  32% (179/558)        
+2022-12-10T11:29:17.0565934Z remote: Compressing objects:  33% (185/558)        
+2022-12-10T11:29:17.0566675Z remote: Compressing objects:  34% (190/558)        
+2022-12-10T11:29:17.0567420Z remote: Compressing objects:  35% (196/558)        
+2022-12-10T11:29:17.0568120Z remote: Compressing objects:  36% (201/558)        
+2022-12-10T11:29:17.0568829Z remote: Compressing objects:  37% (207/558)        
+2022-12-10T11:29:17.0569560Z remote: Compressing objects:  38% (213/558)        
+2022-12-10T11:29:17.0684622Z remote: Compressing objects:  39% (218/558)        
+2022-12-10T11:29:17.0833860Z remote: Compressing objects:  40% (224/558)        
+2022-12-10T11:29:17.1035586Z remote: Compressing objects:  41% (229/558)        
+2022-12-10T11:29:17.1195443Z remote: Compressing objects:  42% (235/558)        
+2022-12-10T11:29:17.1195990Z remote: Compressing objects:  43% (240/558)        
+2022-12-10T11:29:17.1231887Z remote: Compressing objects:  44% (246/558)        
+2022-12-10T11:29:17.1291405Z remote: Compressing objects:  45% (252/558)        
+2022-12-10T11:29:17.1380351Z remote: Compressing objects:  46% (257/558)        
+2022-12-10T11:29:17.1457783Z remote: Compressing objects:  47% (263/558)        
+2022-12-10T11:29:17.1466331Z remote: Compressing objects:  48% (268/558)        
+2022-12-10T11:29:17.1514597Z remote: Compressing objects:  49% (274/558)        
+2022-12-10T11:29:17.1584912Z remote: Compressing objects:  50% (279/558)        
+2022-12-10T11:29:17.1662742Z remote: Compressing objects:  51% (285/558)        
+2022-12-10T11:29:17.1710738Z remote: Compressing objects:  52% (291/558)        
+2022-12-10T11:29:17.1854248Z remote: Compressing objects:  53% (296/558)        
+2022-12-10T11:29:17.2029041Z remote: Compressing objects:  54% (302/558)        
+2022-12-10T11:29:17.2226327Z remote: Compressing objects:  55% (307/558)        
+2022-12-10T11:29:17.2306280Z remote: Compressing objects:  56% (313/558)        
+2022-12-10T11:29:17.2362454Z remote: Compressing objects:  57% (319/558)        
+2022-12-10T11:29:17.2416037Z remote: Compressing objects:  58% (324/558)        
+2022-12-10T11:29:17.2469288Z remote: Compressing objects:  59% (330/558)        
+2022-12-10T11:29:17.2611382Z remote: Compressing objects:  60% (335/558)        
+2022-12-10T11:29:17.2774875Z remote: Compressing objects:  61% (341/558)        
+2022-12-10T11:29:17.2950515Z remote: Compressing objects:  62% (346/558)        
+2022-12-10T11:29:17.3012393Z remote: Compressing objects:  63% (352/558)        
+2022-12-10T11:29:17.3101362Z remote: Compressing objects:  64% (358/558)        
+2022-12-10T11:29:17.3244369Z remote: Compressing objects:  65% (363/558)        
+2022-12-10T11:29:17.3417788Z remote: Compressing objects:  66% (369/558)        
+2022-12-10T11:29:17.3616071Z remote: Compressing objects:  67% (374/558)        
+2022-12-10T11:29:17.3935430Z remote: Compressing objects:  68% (380/558)        
+2022-12-10T11:29:17.4185940Z remote: Compressing objects:  69% (386/558)        
+2022-12-10T11:29:17.4452345Z remote: Compressing objects:  70% (391/558)        
+2022-12-10T11:29:17.4484244Z remote: Compressing objects:  71% (397/558)        
+2022-12-10T11:29:17.4617885Z remote: Compressing objects:  72% (402/558)        
+2022-12-10T11:29:17.4721456Z remote: Compressing objects:  73% (408/558)        
+2022-12-10T11:29:17.4841600Z remote: Compressing objects:  74% (413/558)        
+2022-12-10T11:29:17.4971101Z remote: Compressing objects:  75% (419/558)        
+2022-12-10T11:29:17.5044371Z remote: Compressing objects:  76% (425/558)        
+2022-12-10T11:29:17.5184739Z remote: Compressing objects:  77% (430/558)        
+2022-12-10T11:29:17.5266719Z remote: Compressing objects:  78% (436/558)        
+2022-12-10T11:29:17.5283887Z remote: Compressing objects:  79% (441/558)        
+2022-12-10T11:29:17.5301303Z remote: Compressing objects:  80% (447/558)        
+2022-12-10T11:29:17.5314311Z remote: Compressing objects:  81% (452/558)        
+2022-12-10T11:29:17.5326007Z remote: Compressing objects:  82% (458/558)        
+2022-12-10T11:29:17.5335786Z remote: Compressing objects:  83% (464/558)        
+2022-12-10T11:29:17.5374087Z remote: Compressing objects:  84% (469/558)        
+2022-12-10T11:29:17.5377238Z remote: Compressing objects:  85% (475/558)        
+2022-12-10T11:29:17.5378413Z remote: Compressing objects:  86% (480/558)        
+2022-12-10T11:29:17.5379554Z remote: Compressing objects:  87% (486/558)        
+2022-12-10T11:29:17.5380706Z remote: Compressing objects:  88% (492/558)        
+2022-12-10T11:29:17.5381850Z remote: Compressing objects:  89% (497/558)        
+2022-12-10T11:29:17.5383004Z remote: Compressing objects:  90% (503/558)        
+2022-12-10T11:29:17.5384127Z remote: Compressing objects:  91% (508/558)        
+2022-12-10T11:29:17.5385271Z remote: Compressing objects:  92% (514/558)        
+2022-12-10T11:29:17.5386406Z remote: Compressing objects:  93% (519/558)        
+2022-12-10T11:29:17.5387527Z remote: Compressing objects:  94% (525/558)        
+2022-12-10T11:29:17.5388660Z remote: Compressing objects:  95% (531/558)        
+2022-12-10T11:29:17.5389811Z remote: Compressing objects:  96% (536/558)        
+2022-12-10T11:29:17.5390945Z remote: Compressing objects:  97% (542/558)        
+2022-12-10T11:29:17.5392071Z remote: Compressing objects:  98% (547/558)        
+2022-12-10T11:29:17.5393204Z remote: Compressing objects:  99% (553/558)        
+2022-12-10T11:29:17.5394339Z remote: Compressing objects: 100% (558/558)        
+2022-12-10T11:29:17.5395498Z remote: Compressing objects: 100% (558/558), done.        
+2022-12-10T11:29:17.5569903Z Receiving objects:   0% (1/668)
+2022-12-10T11:29:17.5571466Z Receiving objects:   1% (7/668)
+2022-12-10T11:29:17.5684504Z Receiving objects:   2% (14/668)
+2022-12-10T11:29:17.5979292Z Receiving objects:   3% (21/668)
+2022-12-10T11:29:17.6054685Z Receiving objects:   4% (27/668)
+2022-12-10T11:29:17.6402778Z Receiving objects:   5% (34/668)
+2022-12-10T11:29:17.6425951Z Receiving objects:   6% (41/668)
+2022-12-10T11:29:17.6446534Z Receiving objects:   7% (47/668)
+2022-12-10T11:29:17.6736614Z Receiving objects:   8% (54/668)
+2022-12-10T11:29:17.6759619Z Receiving objects:   9% (61/668)
+2022-12-10T11:29:17.6775244Z Receiving objects:  10% (67/668)
+2022-12-10T11:29:17.6792783Z Receiving objects:  11% (74/668)
+2022-12-10T11:29:17.6808222Z Receiving objects:  12% (81/668)
+2022-12-10T11:29:17.6827603Z Receiving objects:  13% (87/668)
+2022-12-10T11:29:17.6845493Z Receiving objects:  14% (94/668)
+2022-12-10T11:29:17.6857637Z Receiving objects:  15% (101/668)
+2022-12-10T11:29:17.7084950Z Receiving objects:  16% (107/668)
+2022-12-10T11:29:17.7107811Z Receiving objects:  17% (114/668)
+2022-12-10T11:29:17.7126700Z Receiving objects:  18% (121/668)
+2022-12-10T11:29:17.7144866Z Receiving objects:  19% (127/668)
+2022-12-10T11:29:17.7159608Z Receiving objects:  20% (134/668)
+2022-12-10T11:29:17.7173495Z Receiving objects:  21% (141/668)
+2022-12-10T11:29:17.7190397Z Receiving objects:  22% (147/668)
+2022-12-10T11:29:17.7209298Z Receiving objects:  23% (154/668)
+2022-12-10T11:29:17.7222727Z Receiving objects:  24% (161/668)
+2022-12-10T11:29:17.7238776Z Receiving objects:  25% (167/668)
+2022-12-10T11:29:17.7256100Z Receiving objects:  26% (174/668)
+2022-12-10T11:29:17.7274471Z Receiving objects:  27% (181/668)
+2022-12-10T11:29:17.7289127Z Receiving objects:  28% (188/668)
+2022-12-10T11:29:17.7309730Z Receiving objects:  29% (194/668)
+2022-12-10T11:29:17.7331265Z Receiving objects:  30% (201/668)
+2022-12-10T11:29:17.7420134Z Receiving objects:  31% (208/668)
+2022-12-10T11:29:17.7512115Z Receiving objects:  32% (214/668)
+2022-12-10T11:29:17.7531156Z Receiving objects:  33% (221/668)
+2022-12-10T11:29:17.7549478Z Receiving objects:  34% (228/668)
+2022-12-10T11:29:17.7570346Z Receiving objects:  35% (234/668)
+2022-12-10T11:29:17.7582654Z Receiving objects:  36% (241/668)
+2022-12-10T11:29:17.7601864Z Receiving objects:  37% (248/668)
+2022-12-10T11:29:17.7614525Z Receiving objects:  38% (254/668)
+2022-12-10T11:29:17.7617591Z Receiving objects:  39% (261/668)
+2022-12-10T11:29:17.7620546Z Receiving objects:  40% (268/668)
+2022-12-10T11:29:17.7623467Z Receiving objects:  41% (274/668)
+2022-12-10T11:29:17.7626443Z Receiving objects:  42% (281/668)
+2022-12-10T11:29:17.7629366Z Receiving objects:  43% (288/668)
+2022-12-10T11:29:17.7629819Z Receiving objects:  44% (294/668)
+2022-12-10T11:29:17.7684479Z Receiving objects:  45% (301/668)
+2022-12-10T11:29:17.7782698Z Receiving objects:  46% (308/668)
+2022-12-10T11:29:17.7876637Z Receiving objects:  47% (314/668)
+2022-12-10T11:29:17.7989541Z Receiving objects:  48% (321/668)
+2022-12-10T11:29:17.8036996Z Receiving objects:  49% (328/668)
+2022-12-10T11:29:17.8089420Z Receiving objects:  50% (334/668)
+2022-12-10T11:29:17.8112194Z Receiving objects:  51% (341/668)
+2022-12-10T11:29:17.8130785Z Receiving objects:  52% (348/668)
+2022-12-10T11:29:17.8144486Z Receiving objects:  53% (355/668)
+2022-12-10T11:29:17.8146935Z Receiving objects:  54% (361/668)
+2022-12-10T11:29:17.8148881Z Receiving objects:  55% (368/668)
+2022-12-10T11:29:17.8159003Z Receiving objects:  56% (375/668)
+2022-12-10T11:29:17.8160966Z Receiving objects:  57% (381/668)
+2022-12-10T11:29:17.8162443Z Receiving objects:  58% (388/668)
+2022-12-10T11:29:17.8163992Z Receiving objects:  59% (395/668)
+2022-12-10T11:29:17.8165819Z Receiving objects:  60% (401/668)
+2022-12-10T11:29:17.8168058Z Receiving objects:  61% (408/668)
+2022-12-10T11:29:17.8169729Z Receiving objects:  62% (415/668)
+2022-12-10T11:29:17.8170724Z Receiving objects:  63% (421/668)
+2022-12-10T11:29:17.8173945Z Receiving objects:  64% (428/668)
+2022-12-10T11:29:17.8174317Z Receiving objects:  65% (435/668)
+2022-12-10T11:29:17.8191920Z Receiving objects:  66% (441/668)
+2022-12-10T11:29:17.8211600Z Receiving objects:  67% (448/668)
+2022-12-10T11:29:17.8212034Z Receiving objects:  68% (455/668)
+2022-12-10T11:29:17.8212458Z Receiving objects:  69% (461/668)
+2022-12-10T11:29:17.8218351Z Receiving objects:  70% (468/668)
+2022-12-10T11:29:17.8218726Z Receiving objects:  71% (475/668)
+2022-12-10T11:29:17.8219049Z Receiving objects:  72% (481/668)
+2022-12-10T11:29:17.8245123Z Receiving objects:  73% (488/668)
+2022-12-10T11:29:17.8245907Z Receiving objects:  74% (495/668)
+2022-12-10T11:29:17.8246185Z Receiving objects:  75% (501/668)
+2022-12-10T11:29:17.8246417Z Receiving objects:  76% (508/668)
+2022-12-10T11:29:17.8280988Z Receiving objects:  77% (515/668)
+2022-12-10T11:29:17.8281798Z remote: Total 668 (delta 90), reused 335 (delta 76), pack-reused 0        
+2022-12-10T11:29:17.8282312Z Receiving objects:  78% (522/668)
+2022-12-10T11:29:17.8282781Z Receiving objects:  79% (528/668)
+2022-12-10T11:29:17.8285179Z Receiving objects:  80% (535/668)
+2022-12-10T11:29:17.8285579Z Receiving objects:  81% (542/668)
+2022-12-10T11:29:17.8285991Z Receiving objects:  82% (548/668)
+2022-12-10T11:29:17.8287316Z Receiving objects:  83% (555/668)
+2022-12-10T11:29:17.8288757Z Receiving objects:  84% (562/668)
+2022-12-10T11:29:17.8289974Z Receiving objects:  85% (568/668)
+2022-12-10T11:29:17.8291433Z Receiving objects:  86% (575/668)
+2022-12-10T11:29:17.8291821Z Receiving objects:  87% (582/668)
+2022-12-10T11:29:17.8293468Z Receiving objects:  88% (588/668)
+2022-12-10T11:29:17.8294895Z Receiving objects:  89% (595/668)
+2022-12-10T11:29:17.8296041Z Receiving objects:  90% (602/668)
+2022-12-10T11:29:17.8296433Z Receiving objects:  91% (608/668)
+2022-12-10T11:29:17.8297488Z Receiving objects:  92% (615/668)
+2022-12-10T11:29:17.8298874Z Receiving objects:  93% (622/668)
+2022-12-10T11:29:17.8303189Z Receiving objects:  94% (628/668)
+2022-12-10T11:29:17.8305477Z Receiving objects:  95% (635/668)
+2022-12-10T11:29:17.8307583Z Receiving objects:  96% (642/668)
+2022-12-10T11:29:17.8309788Z Receiving objects:  97% (648/668)
+2022-12-10T11:29:17.8310238Z Receiving objects:  98% (655/668)
+2022-12-10T11:29:17.8312816Z Receiving objects:  99% (662/668)
+2022-12-10T11:29:17.8313202Z Receiving objects: 100% (668/668)
+2022-12-10T11:29:17.8313655Z Receiving objects: 100% (668/668), 4.75 MiB | 17.29 MiB/s, done.
+2022-12-10T11:29:17.8326415Z Resolving deltas:   0% (0/90)
+2022-12-10T11:29:17.8327677Z Resolving deltas:   1% (1/90)
+2022-12-10T11:29:17.8328224Z Resolving deltas:   2% (2/90)
+2022-12-10T11:29:17.8337026Z Resolving deltas:   3% (3/90)
+2022-12-10T11:29:17.8337477Z Resolving deltas:   4% (4/90)
+2022-12-10T11:29:17.8337864Z Resolving deltas:   5% (5/90)
+2022-12-10T11:29:17.8338087Z Resolving deltas:   6% (6/90)
+2022-12-10T11:29:17.8338296Z Resolving deltas:   7% (7/90)
+2022-12-10T11:29:17.8341757Z Resolving deltas:   8% (8/90)
+2022-12-10T11:29:17.8343864Z Resolving deltas:  10% (9/90)
+2022-12-10T11:29:17.8344258Z Resolving deltas:  11% (10/90)
+2022-12-10T11:29:17.8344627Z Resolving deltas:  12% (11/90)
+2022-12-10T11:29:17.8344852Z Resolving deltas:  13% (12/90)
+2022-12-10T11:29:17.8345054Z Resolving deltas:  14% (13/90)
+2022-12-10T11:29:17.8345260Z Resolving deltas:  15% (14/90)
+2022-12-10T11:29:17.8345459Z Resolving deltas:  16% (15/90)
+2022-12-10T11:29:17.8345661Z Resolving deltas:  17% (16/90)
+2022-12-10T11:29:17.8345867Z Resolving deltas:  18% (17/90)
+2022-12-10T11:29:17.8346057Z Resolving deltas:  20% (18/90)
+2022-12-10T11:29:17.8346255Z Resolving deltas:  21% (19/90)
+2022-12-10T11:29:17.8346451Z Resolving deltas:  22% (20/90)
+2022-12-10T11:29:17.8346640Z Resolving deltas:  23% (21/90)
+2022-12-10T11:29:17.8346834Z Resolving deltas:  24% (22/90)
+2022-12-10T11:29:17.8349726Z Resolving deltas:  25% (23/90)
+2022-12-10T11:29:17.8350130Z Resolving deltas:  26% (24/90)
+2022-12-10T11:29:17.8350467Z Resolving deltas:  27% (25/90)
+2022-12-10T11:29:17.8350672Z Resolving deltas:  28% (26/90)
+2022-12-10T11:29:17.8350867Z Resolving deltas:  30% (27/90)
+2022-12-10T11:29:17.8351071Z Resolving deltas:  31% (28/90)
+2022-12-10T11:29:17.8351389Z Resolving deltas:  32% (29/90)
+2022-12-10T11:29:17.8351589Z Resolving deltas:  33% (30/90)
+2022-12-10T11:29:17.8351783Z Resolving deltas:  34% (31/90)
+2022-12-10T11:29:17.8351977Z Resolving deltas:  35% (32/90)
+2022-12-10T11:29:17.8352168Z Resolving deltas:  36% (33/90)
+2022-12-10T11:29:17.8355998Z Resolving deltas:  37% (34/90)
+2022-12-10T11:29:17.8356388Z Resolving deltas:  38% (35/90)
+2022-12-10T11:29:17.8356719Z Resolving deltas:  40% (36/90)
+2022-12-10T11:29:17.8356922Z Resolving deltas:  41% (37/90)
+2022-12-10T11:29:17.8357111Z Resolving deltas:  42% (38/90)
+2022-12-10T11:29:17.8357305Z Resolving deltas:  43% (39/90)
+2022-12-10T11:29:17.8357505Z Resolving deltas:  44% (40/90)
+2022-12-10T11:29:17.8357694Z Resolving deltas:  45% (41/90)
+2022-12-10T11:29:17.8357895Z Resolving deltas:  46% (42/90)
+2022-12-10T11:29:17.8358087Z Resolving deltas:  47% (43/90)
+2022-12-10T11:29:17.8358280Z Resolving deltas:  48% (44/90)
+2022-12-10T11:29:17.8358477Z Resolving deltas:  50% (45/90)
+2022-12-10T11:29:17.8358670Z Resolving deltas:  51% (46/90)
+2022-12-10T11:29:17.8358863Z Resolving deltas:  52% (47/90)
+2022-12-10T11:29:17.8366059Z Resolving deltas:  53% (48/90)
+2022-12-10T11:29:17.8366459Z Resolving deltas:  54% (49/90)
+2022-12-10T11:29:17.8366786Z Resolving deltas:  55% (50/90)
+2022-12-10T11:29:17.8367150Z Resolving deltas:  56% (51/90)
+2022-12-10T11:29:17.8367492Z Resolving deltas:  57% (52/90)
+2022-12-10T11:29:17.8367707Z Resolving deltas:  58% (53/90)
+2022-12-10T11:29:17.8367917Z Resolving deltas:  60% (54/90)
+2022-12-10T11:29:17.8368110Z Resolving deltas:  61% (55/90)
+2022-12-10T11:29:17.8368314Z Resolving deltas:  62% (56/90)
+2022-12-10T11:29:17.8368516Z Resolving deltas:  63% (57/90)
+2022-12-10T11:29:17.8368705Z Resolving deltas:  64% (58/90)
+2022-12-10T11:29:17.8368903Z Resolving deltas:  65% (59/90)
+2022-12-10T11:29:17.8369100Z Resolving deltas:  66% (60/90)
+2022-12-10T11:29:17.8384162Z Resolving deltas:  67% (61/90)
+2022-12-10T11:29:17.8385668Z Resolving deltas:  68% (62/90)
+2022-12-10T11:29:17.8389581Z Resolving deltas:  70% (63/90)
+2022-12-10T11:29:17.8391340Z Resolving deltas:  71% (64/90)
+2022-12-10T11:29:17.8391715Z Resolving deltas:  72% (65/90)
+2022-12-10T11:29:17.8394781Z Resolving deltas:  73% (66/90)
+2022-12-10T11:29:17.8398287Z Resolving deltas:  74% (67/90)
+2022-12-10T11:29:17.8401930Z Resolving deltas:  75% (68/90)
+2022-12-10T11:29:17.8403385Z Resolving deltas:  76% (69/90)
+2022-12-10T11:29:17.8403755Z Resolving deltas:  77% (70/90)
+2022-12-10T11:29:17.8407153Z Resolving deltas:  78% (71/90)
+2022-12-10T11:29:17.8407544Z Resolving deltas:  80% (72/90)
+2022-12-10T11:29:17.8408007Z Resolving deltas:  81% (73/90)
+2022-12-10T11:29:17.8408247Z Resolving deltas:  82% (74/90)
+2022-12-10T11:29:17.8408453Z Resolving deltas:  83% (75/90)
+2022-12-10T11:29:17.8408658Z Resolving deltas:  84% (76/90)
+2022-12-10T11:29:17.8408857Z Resolving deltas:  85% (77/90)
+2022-12-10T11:29:17.8409055Z Resolving deltas:  86% (78/90)
+2022-12-10T11:29:17.8411861Z Resolving deltas:  87% (79/90)
+2022-12-10T11:29:17.8412076Z Resolving deltas:  88% (80/90)
+2022-12-10T11:29:17.8412277Z Resolving deltas:  90% (81/90)
+2022-12-10T11:29:17.8427194Z Resolving deltas:  91% (82/90)
+2022-12-10T11:29:17.8428221Z Resolving deltas:  92% (83/90)
+2022-12-10T11:29:17.8429411Z Resolving deltas:  93% (84/90)
+2022-12-10T11:29:17.8434216Z Resolving deltas:  94% (85/90)
+2022-12-10T11:29:17.8435918Z Resolving deltas:  95% (86/90)
+2022-12-10T11:29:17.8436297Z Resolving deltas:  96% (87/90)
+2022-12-10T11:29:17.8439256Z Resolving deltas:  97% (88/90)
+2022-12-10T11:29:17.8446321Z Resolving deltas:  98% (89/90)
+2022-12-10T11:29:17.8446677Z Resolving deltas: 100% (90/90)
+2022-12-10T11:29:17.8447008Z Resolving deltas: 100% (90/90), done.
+2022-12-10T11:29:17.8554342Z From https://github.com/github/opensource.guide
+2022-12-10T11:29:17.8554991Z  * [new ref]         8f3b90572a88f0a648584a3ba5cbcb56fa5fe9f5 -> pull/2953/merge
+2022-12-10T11:29:17.8592364Z ##[endgroup]
+2022-12-10T11:29:17.8592793Z ##[group]Determining the checkout info
+2022-12-10T11:29:17.8593294Z ##[endgroup]
+2022-12-10T11:29:17.8593656Z ##[group]Checking out the ref
+2022-12-10T11:29:17.8594131Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/2953/merge
+2022-12-10T11:29:17.9404268Z Note: switching to 'refs/remotes/pull/2953/merge'.
+2022-12-10T11:29:17.9404825Z 
+2022-12-10T11:29:17.9406583Z You are in 'detached HEAD' state. You can look around, make experimental
+2022-12-10T11:29:17.9407558Z changes and commit them, and you can discard any commits you make in this
+2022-12-10T11:29:17.9408250Z state without impacting any branches by switching back to a branch.
+2022-12-10T11:29:17.9408518Z 
+2022-12-10T11:29:17.9408765Z If you want to create a new branch to retain commits you create, you may
+2022-12-10T11:29:17.9409178Z do so (now or later) by using -c with the switch command. Example:
+2022-12-10T11:29:17.9409437Z 
+2022-12-10T11:29:17.9409590Z   git switch -c <new-branch-name>
+2022-12-10T11:29:17.9409973Z 
+2022-12-10T11:29:17.9410163Z Or undo this operation with:
+2022-12-10T11:29:17.9410317Z 
+2022-12-10T11:29:17.9410465Z   git switch -
+2022-12-10T11:29:17.9410920Z 
+2022-12-10T11:29:17.9411174Z Turn off this advice by setting config variable advice.detachedHead to false
+2022-12-10T11:29:17.9411383Z 
+2022-12-10T11:29:17.9411667Z HEAD is now at 8f3b905 Merge 93138932accec72ff0e5563f2eea0db71f135f99 into c97bd849cce0a13cc67228975294bbbadc1beb41
+2022-12-10T11:29:17.9416748Z ##[endgroup]
+2022-12-10T11:29:17.9458394Z [command]/usr/bin/git log -1 --format='%H'
+2022-12-10T11:29:17.9487120Z '8f3b90572a88f0a648584a3ba5cbcb56fa5fe9f5'
+2022-12-10T11:29:17.9810466Z ##[group]Run ruby/setup-ruby@v1
+2022-12-10T11:29:17.9810680Z with:
+2022-12-10T11:29:17.9810865Z   bundler-cache: true
+2022-12-10T11:29:17.9811064Z   ruby-version: default
+2022-12-10T11:29:17.9811254Z ##[endgroup]
+2022-12-10T11:29:18.1463278Z Using 2.7.5 as input from file .ruby-version
+2022-12-10T11:29:18.1556947Z ##[group]Modifying PATH
+2022-12-10T11:29:18.1557555Z Entries added to PATH to use selected Ruby:
+2022-12-10T11:29:18.1558348Z   /opt/hostedtoolcache/Ruby/2.7.5/x64/bin
+2022-12-10T11:29:18.1558875Z ##[endgroup]
+2022-12-10T11:29:18.1622361Z ##[group]Downloading Ruby
+2022-12-10T11:29:18.1623167Z https://github.com/ruby/ruby-builder/releases/download/toolcache/ruby-2.7.5-ubuntu-22.04.tar.gz
+2022-12-10T11:29:19.6329856Z Took   1.47 seconds
+2022-12-10T11:29:19.6330473Z ##[endgroup]
+2022-12-10T11:29:19.6331973Z ##[group]Extracting  Ruby
+2022-12-10T11:29:19.6363243Z [command]/usr/bin/tar -xz -C /opt/hostedtoolcache/Ruby/2.7.5 -f /home/runner/work/_temp/ad42ac59-fe98-47d6-9d12-3a1377a24c55
+2022-12-10T11:29:20.0156774Z Took   0.38 seconds
+2022-12-10T11:29:20.0157354Z ##[endgroup]
+2022-12-10T11:29:20.0158602Z ##[group]Print Ruby version
+2022-12-10T11:29:20.0167047Z [command]/opt/hostedtoolcache/Ruby/2.7.5/x64/bin/ruby --version
+2022-12-10T11:29:20.0330993Z ruby 2.7.5p203 (2021-11-24 revision f69aeb8314) [x86_64-linux]
+2022-12-10T11:29:20.0342920Z Took   0.02 seconds
+2022-12-10T11:29:20.0344348Z ##[endgroup]
+2022-12-10T11:29:20.0346879Z ##[group]Installing Bundler
+2022-12-10T11:29:20.0352799Z Using latest Bundler for ruby-2.7.5 because the default Bundler gem is too old for that Ruby version
+2022-12-10T11:29:20.0358409Z [command]/opt/hostedtoolcache/Ruby/2.7.5/x64/bin/gem install bundler -v ~> 2.0
+2022-12-10T11:29:20.7336154Z Successfully installed bundler-2.3.26
+2022-12-10T11:29:20.7336683Z 1 gem installed
+2022-12-10T11:29:20.7386171Z Took   0.70 seconds
+2022-12-10T11:29:20.7386723Z ##[endgroup]
+2022-12-10T11:29:20.7387087Z ##[group]bundle install
+2022-12-10T11:29:20.7401439Z [command]/opt/hostedtoolcache/Ruby/2.7.5/x64/bin/bundle config --local path /home/runner/work/opensource.guide/opensource.guide/vendor/bundle
+2022-12-10T11:29:20.8940565Z [command]/opt/hostedtoolcache/Ruby/2.7.5/x64/bin/bundle lock
+2022-12-10T11:29:24.0173179Z Fetching gem metadata from https://rubygems.org/...........
+2022-12-10T11:29:24.3581608Z Resolving dependencies...
+2022-12-10T11:29:24.3779264Z Writing lockfile to /home/runner/work/opensource.guide/opensource.guide/Gemfile.lock
+2022-12-10T11:29:24.3901806Z Cache key: setup-ruby-bundler-cache-v4-ubuntu-22.04-ruby-2.7.5-Gemfile.lock-46d8ce22caa896bdb9ac864687e858dad6c2c3d111ceef5b2be18e42ec50cc8a
+2022-12-10T11:29:24.7899224Z [command]/opt/hostedtoolcache/Ruby/2.7.5/x64/bin/bundle install --jobs 4
+2022-12-10T11:29:26.0458305Z Fetching gem metadata from https://rubygems.org/.........
+2022-12-10T11:29:26.0729862Z Fetching rake 13.0.6
+2022-12-10T11:29:26.1571069Z Installing rake 13.0.6
+2022-12-10T11:29:26.1881233Z Fetching minitest 5.16.3
+2022-12-10T11:29:26.1933966Z Fetching concurrent-ruby 1.1.10
+2022-12-10T11:29:26.1990271Z Fetching zeitwerk 2.6.6
+2022-12-10T11:29:26.1990750Z Fetching thread_safe 0.3.6
+2022-12-10T11:29:26.2424475Z Installing zeitwerk 2.6.6
+2022-12-10T11:29:26.2521178Z Installing minitest 5.16.3
+2022-12-10T11:29:26.2845788Z Installing thread_safe 0.3.6
+2022-12-10T11:29:26.2941532Z Fetching public_suffix 4.0.7
+2022-12-10T11:29:26.3212923Z Installing concurrent-ruby 1.1.10
+2022-12-10T11:29:26.3890068Z Using bundler 2.3.26
+2022-12-10T11:29:26.3904646Z Fetching coffee-script-source 1.11.1
+2022-12-10T11:29:26.3996932Z Installing public_suffix 4.0.7
+2022-12-10T11:29:26.4288088Z Fetching execjs 2.8.1
+2022-12-10T11:29:26.4825819Z Installing coffee-script-source 1.11.1
+2022-12-10T11:29:26.4992751Z Installing execjs 2.8.1
+2022-12-10T11:29:26.5065762Z Fetching colorator 1.1.0
+2022-12-10T11:29:26.5146556Z Fetching commonmarker 0.23.6
+2022-12-10T11:29:26.5261012Z Fetching unf_ext 0.0.8.2
+2022-12-10T11:29:26.5467255Z Installing colorator 1.1.0
+2022-12-10T11:29:26.5614444Z Fetching eventmachine 1.2.7
+2022-12-10T11:29:26.5736042Z Fetching http_parser.rb 0.8.0
+2022-12-10T11:29:26.5892965Z Installing commonmarker 0.23.6 with native extensions
+2022-12-10T11:29:26.6642724Z Installing unf_ext 0.0.8.2 with native extensions
+2022-12-10T11:29:26.6838442Z Installing eventmachine 1.2.7 with native extensions
+2022-12-10T11:29:26.7117174Z Installing http_parser.rb 0.8.0 with native extensions
+2022-12-10T11:29:34.3878715Z Fetching ffi 1.15.5
+2022-12-10T11:29:34.4835470Z Installing ffi 1.15.5 with native extensions
+2022-12-10T11:29:37.5562823Z Fetching faraday-net_http 3.0.2
+2022-12-10T11:29:37.5909617Z Installing faraday-net_http 3.0.2
+2022-12-10T11:29:37.5962132Z Fetching ruby2_keywords 0.0.5
+2022-12-10T11:29:37.6380891Z Installing ruby2_keywords 0.0.5
+2022-12-10T11:29:37.6442258Z Fetching forwardable-extended 2.6.0
+2022-12-10T11:29:37.6855231Z Installing forwardable-extended 2.6.0
+2022-12-10T11:29:37.6877900Z Fetching gemoji 3.0.1
+2022-12-10T11:29:37.7351912Z Installing gemoji 3.0.1
+2022-12-10T11:29:37.7489955Z Fetching rb-fsevent 0.11.2
+2022-12-10T11:29:37.7984935Z Installing rb-fsevent 0.11.2
+2022-12-10T11:29:37.8153431Z Fetching rexml 3.2.5
+2022-12-10T11:29:37.8712506Z Installing rexml 3.2.5
+2022-12-10T11:29:37.9041595Z Fetching liquid 4.0.3
+2022-12-10T11:29:37.9519104Z Installing liquid 4.0.3
+2022-12-10T11:29:37.9908695Z Fetching mercenary 0.3.6
+2022-12-10T11:29:38.0239072Z Installing mercenary 0.3.6
+2022-12-10T11:29:38.0357700Z Fetching rouge 3.26.0
+2022-12-10T11:29:38.1291291Z Installing rouge 3.26.0
+2022-12-10T11:29:38.3034815Z Fetching safe_yaml 1.0.5
+2022-12-10T11:29:38.3389307Z Installing safe_yaml 1.0.5
+2022-12-10T11:29:38.3593782Z Fetching racc 1.6.1
+2022-12-10T11:29:38.4121379Z Installing racc 1.6.1 with native extensions
+2022-12-10T11:29:38.5362017Z Fetching jekyll-paginate 1.1.0
+2022-12-10T11:29:38.5717389Z Installing jekyll-paginate 1.1.0
+2022-12-10T11:29:38.5834565Z Fetching rubyzip 2.3.2
+2022-12-10T11:29:38.6273211Z Installing rubyzip 2.3.2
+2022-12-10T11:29:38.6468799Z Fetching jekyll-swiss 1.0.0
+2022-12-10T11:29:38.6839193Z Installing jekyll-swiss 1.0.0
+2022-12-10T11:29:38.6980496Z Fetching unicode-display_width 1.8.0
+2022-12-10T11:29:38.7343625Z Installing unicode-display_width 1.8.0
+2022-12-10T11:29:38.7443219Z Fetching parallel 1.22.1
+2022-12-10T11:29:38.7820893Z Installing parallel 1.22.1
+2022-12-10T11:29:38.7872723Z Fetching rainbow 3.1.1
+2022-12-10T11:29:38.8243785Z Installing rainbow 3.1.1
+2022-12-10T11:29:38.8387564Z Fetching yell 2.2.2
+2022-12-10T11:29:38.8722327Z Installing yell 2.2.2
+2022-12-10T11:29:38.8911046Z Fetching tzinfo 1.2.10
+2022-12-10T11:29:38.9526206Z Installing tzinfo 1.2.10
+2022-12-10T11:29:39.0031504Z Fetching addressable 2.8.1
+2022-12-10T11:29:39.0624579Z Installing addressable 2.8.1
+2022-12-10T11:29:39.0794201Z Fetching coffee-script 2.4.1
+2022-12-10T11:29:39.1129623Z Installing coffee-script 2.4.1
+2022-12-10T11:29:39.1194583Z Fetching i18n 0.9.5
+2022-12-10T11:29:39.1666119Z Installing i18n 0.9.5
+2022-12-10T11:29:39.2094829Z Fetching jekyll-commonmark 1.4.0
+2022-12-10T11:29:39.2509061Z Installing jekyll-commonmark 1.4.0
+2022-12-10T11:29:39.2571028Z Fetching unf 0.1.4
+2022-12-10T11:29:39.3138258Z Installing unf 0.1.4
+2022-12-10T11:29:39.3287655Z Fetching faraday 2.7.1
+2022-12-10T11:29:39.3770530Z Installing faraday 2.7.1
+2022-12-10T11:29:39.4074875Z Fetching pathutil 0.16.2
+2022-12-10T11:29:39.4438519Z Installing pathutil 0.16.2
+2022-12-10T11:29:39.4495120Z Fetching kramdown 2.3.2
+2022-12-10T11:29:39.5094010Z Installing kramdown 2.3.2
+2022-12-10T11:29:39.7503847Z Fetching terminal-table 1.8.0
+2022-12-10T11:29:39.7839054Z Installing terminal-table 1.8.0
+2022-12-10T11:29:39.7940293Z Fetching jekyll-coffeescript 1.1.1
+2022-12-10T11:29:39.8314099Z Installing jekyll-coffeescript 1.1.1
+2022-12-10T11:29:39.8381304Z Fetching activesupport 6.0.6
+2022-12-10T11:29:39.8966590Z Installing activesupport 6.0.6
+2022-12-10T11:29:40.0041747Z Fetching simpleidn 0.2.1
+2022-12-10T11:29:40.0656463Z Installing simpleidn 0.2.1
+2022-12-10T11:29:40.0798670Z Fetching sawyer 0.9.2
+2022-12-10T11:29:40.1135555Z Installing sawyer 0.9.2
+2022-12-10T11:29:40.1244785Z Fetching kramdown-parser-gfm 1.1.0
+2022-12-10T11:29:40.1574956Z Installing kramdown-parser-gfm 1.1.0
+2022-12-10T11:29:40.1764617Z Fetching dnsruby 1.61.9
+2022-12-10T11:29:40.2603467Z Installing dnsruby 1.61.9
+2022-12-10T11:29:40.3354700Z Fetching octokit 4.25.1
+2022-12-10T11:29:40.3877007Z Installing octokit 4.25.1
+2022-12-10T11:29:40.4275834Z Fetching jekyll-gist 1.5.0
+2022-12-10T11:29:40.4656095Z Installing jekyll-gist 1.5.0
+2022-12-10T11:29:58.3323158Z Fetching ethon 0.16.0
+2022-12-10T11:29:58.3402876Z Fetching rb-inotify 0.10.1
+2022-12-10T11:29:58.3796652Z Installing rb-inotify 0.10.1
+2022-12-10T11:29:58.3915737Z Installing ethon 0.16.0
+2022-12-10T11:29:58.4069520Z Fetching sass-listen 4.0.0
+2022-12-10T11:29:58.4474298Z Installing sass-listen 4.0.0
+2022-12-10T11:29:58.4737666Z Fetching listen 3.7.1
+2022-12-10T11:29:58.4816452Z Fetching typhoeus 1.4.0
+2022-12-10T11:29:58.5220368Z Installing listen 3.7.1
+2022-12-10T11:29:58.6002148Z Installing typhoeus 1.4.0
+2022-12-10T11:29:58.6152431Z Fetching sass 3.7.4
+2022-12-10T11:29:58.6530248Z Fetching jekyll-watch 2.2.1
+2022-12-10T11:29:58.6868701Z Installing jekyll-watch 2.2.1
+2022-12-10T11:29:58.6921694Z Fetching github-pages-health-check 1.17.9
+2022-12-10T11:29:58.7068097Z Installing sass 3.7.4
+2022-12-10T11:29:58.7452814Z Installing github-pages-health-check 1.17.9
+2022-12-10T11:29:58.7923524Z Fetching jekyll-sass-converter 1.5.2
+2022-12-10T11:29:58.8276240Z Installing jekyll-sass-converter 1.5.2
+2022-12-10T11:29:59.0835229Z Fetching nokogiri 1.13.10 (x86_64-linux)
+2022-12-10T11:29:59.3107804Z Installing nokogiri 1.13.10 (x86_64-linux)
+2022-12-10T11:29:59.6187228Z Fetching html-pipeline 2.14.3
+2022-12-10T11:29:59.6242777Z Fetching html-proofer 3.19.4
+2022-12-10T11:29:59.6592254Z Installing html-proofer 3.19.4
+2022-12-10T11:29:59.6670725Z Installing html-pipeline 2.14.3
+2022-12-10T11:30:00.1949799Z Fetching em-websocket 0.5.3
+2022-12-10T11:30:00.2293618Z Installing em-websocket 0.5.3
+2022-12-10T11:30:00.2496746Z Fetching jekyll 3.9.2
+2022-12-10T11:30:00.3075445Z Installing jekyll 3.9.2
+2022-12-10T11:30:00.3518565Z Fetching jekyll-feed 0.15.1
+2022-12-10T11:30:00.3522056Z Fetching jekyll-commonmark-ghpages 0.2.0
+2022-12-10T11:30:00.3523865Z Fetching jekyll-avatar 0.7.0
+2022-12-10T11:30:00.3524375Z Fetching jekyll-default-layout 0.1.4
+2022-12-10T11:30:00.3972372Z Installing jekyll-commonmark-ghpages 0.2.0
+2022-12-10T11:30:00.4060412Z Installing jekyll-feed 0.15.1
+2022-12-10T11:30:00.4107552Z Installing jekyll-default-layout 0.1.4
+2022-12-10T11:30:00.4153167Z Installing jekyll-avatar 0.7.0
+2022-12-10T11:30:00.4187019Z Fetching jekyll-github-metadata 2.13.0
+2022-12-10T11:30:00.4313082Z Fetching jekyll-include-cache 0.2.1
+2022-12-10T11:30:00.4334306Z Fetching jekyll-mentions 1.6.0
+2022-12-10T11:30:00.4480771Z Fetching jekyll-optional-front-matter 0.3.2
+2022-12-10T11:30:00.4678781Z Installing jekyll-github-metadata 2.13.0
+2022-12-10T11:30:00.4780133Z Installing jekyll-mentions 1.6.0
+2022-12-10T11:30:00.4796659Z Fetching jekyll-readme-index 0.3.0
+2022-12-10T11:30:00.4875500Z Installing jekyll-optional-front-matter 0.3.2
+2022-12-10T11:30:00.4920836Z Installing jekyll-include-cache 0.2.1
+2022-12-10T11:30:00.4956800Z Fetching jekyll-relative-links 0.6.1
+2022-12-10T11:30:00.5018991Z Fetching jekyll-redirect-from 0.16.0
+2022-12-10T11:30:00.5090214Z Fetching jekyll-remote-theme 0.4.3
+2022-12-10T11:30:00.5283547Z Installing jekyll-readme-index 0.3.0
+2022-12-10T11:30:00.5332422Z Fetching jekyll-seo-tag 2.8.0
+2022-12-10T11:30:00.5378557Z Installing jekyll-relative-links 0.6.1
+2022-12-10T11:30:00.5463916Z Installing jekyll-redirect-from 0.16.0
+2022-12-10T11:30:00.5557588Z Installing jekyll-remote-theme 0.4.3
+2022-12-10T11:30:00.5576860Z Fetching jekyll-sitemap 1.4.0
+2022-12-10T11:30:00.5741457Z Fetching jekyll-titles-from-headings 0.5.3
+2022-12-10T11:30:00.5829778Z Installing jekyll-seo-tag 2.8.0
+2022-12-10T11:30:00.6037639Z Fetching jemoji 0.12.0
+2022-12-10T11:30:00.6141463Z Fetching jekyll-theme-architect 0.2.0
+2022-12-10T11:30:00.6204733Z Installing jekyll-sitemap 1.4.0
+2022-12-10T11:30:00.6340635Z Installing jekyll-titles-from-headings 0.5.3
+2022-12-10T11:30:00.6362057Z Fetching jekyll-theme-cayman 0.2.0
+2022-12-10T11:30:00.6582260Z Fetching jekyll-theme-dinky 0.2.0
+2022-12-10T11:30:00.6733917Z Installing jemoji 0.12.0
+2022-12-10T11:30:00.6763173Z Installing jekyll-theme-architect 0.2.0
+2022-12-10T11:30:00.6811827Z Fetching jekyll-theme-hacker 0.2.0
+2022-12-10T11:30:00.6936925Z Installing jekyll-theme-cayman 0.2.0
+2022-12-10T11:30:00.7175834Z Installing jekyll-theme-dinky 0.2.0
+2022-12-10T11:30:00.7211768Z Fetching jekyll-theme-leap-day 0.2.0
+2022-12-10T11:30:00.7353535Z Installing jekyll-theme-hacker 0.2.0
+2022-12-10T11:30:00.7362621Z Fetching jekyll-theme-merlot 0.2.0
+2022-12-10T11:30:00.7472375Z Fetching jekyll-theme-midnight 0.2.0
+2022-12-10T11:30:00.7579114Z Fetching jekyll-theme-minimal 0.2.0
+2022-12-10T11:30:00.8348961Z Installing jekyll-theme-minimal 0.2.0
+2022-12-10T11:30:00.8430432Z Installing jekyll-theme-merlot 0.2.0
+2022-12-10T11:30:00.8730359Z Installing jekyll-theme-leap-day 0.2.0
+2022-12-10T11:30:00.9163770Z Fetching jekyll-theme-modernist 0.2.0
+2022-12-10T11:30:01.0430705Z Installing jekyll-theme-modernist 0.2.0
+2022-12-10T11:30:01.0541308Z Fetching jekyll-theme-primer 0.6.0
+2022-12-10T11:30:01.0559519Z Fetching jekyll-theme-slate 0.2.0
+2022-12-10T11:30:01.0706125Z Fetching jekyll-theme-tactile 0.2.0
+2022-12-10T11:30:01.1064880Z Installing jekyll-theme-slate 0.2.0
+2022-12-10T11:30:01.1148921Z Installing jekyll-theme-primer 0.6.0
+2022-12-10T11:30:01.1193672Z Installing jekyll-theme-tactile 0.2.0
+2022-12-10T11:30:01.1288537Z Fetching jekyll-theme-time-machine 0.2.0
+2022-12-10T11:30:01.1485727Z Fetching minima 2.5.1
+2022-12-10T11:30:01.1667025Z Installing jekyll-theme-time-machine 0.2.0
+2022-12-10T11:30:01.1863520Z Installing jekyll-theme-midnight 0.2.0
+2022-12-10T11:30:01.1950264Z Installing minima 2.5.1
+2022-12-10T11:30:01.3684229Z Fetching github-pages 227
+2022-12-10T11:30:01.4161384Z Installing github-pages 227
+2022-12-10T11:30:01.4286474Z Bundle complete! 3 Gemfile dependencies, 96 gems now installed.
+2022-12-10T11:30:01.4287749Z Bundled gems are installed into `./vendor/bundle`
+2022-12-10T11:30:01.4288263Z Post-install message from dnsruby:
+2022-12-10T11:30:01.4288576Z Installing dnsruby...
+2022-12-10T11:30:01.4288943Z   For issues and source code: https://github.com/alexdalitz/dnsruby
+2022-12-10T11:30:01.4289456Z   For general discussion (please tell us how you use dnsruby): https://groups.google.com/forum/#!forum/dnsruby
+2022-12-10T11:30:01.4289917Z Post-install message from sass:
+2022-12-10T11:30:01.4290141Z 
+2022-12-10T11:30:01.4290429Z Ruby Sass has reached end-of-life and should no longer be used.
+2022-12-10T11:30:01.4290687Z 
+2022-12-10T11:30:01.4290997Z * If you use Sass as a command-line tool, we recommend using Dart Sass, the new
+2022-12-10T11:30:01.4291466Z   primary implementation: https://sass-lang.com/install
+2022-12-10T11:30:01.4291724Z 
+2022-12-10T11:30:01.4292035Z * If you use Sass as a plug-in for a Ruby web framework, we recommend using the
+2022-12-10T11:30:01.4292503Z   sassc gem: https://github.com/sass/sassc-ruby#readme
+2022-12-10T11:30:01.4292753Z 
+2022-12-10T11:30:01.4292949Z * For more details, please refer to the Sass blog:
+2022-12-10T11:30:01.4293362Z   https://sass-lang.com/blog/posts/7828841
+2022-12-10T11:30:01.4293601Z 
+2022-12-10T11:30:01.4293846Z Post-install message from html-pipeline:
+2022-12-10T11:30:01.4294251Z -------------------------------------------------
+2022-12-10T11:30:01.4294641Z Thank you for installing html-pipeline!
+2022-12-10T11:30:01.4294970Z You must bundle Filter gem dependencies.
+2022-12-10T11:30:01.4295361Z See html-pipeline README.md for more details.
+2022-12-10T11:30:01.4295782Z https://github.com/jch/html-pipeline#dependencies
+2022-12-10T11:30:01.4296194Z -------------------------------------------------
+2022-12-10T11:30:01.4296563Z Post-install message from rubyzip:
+2022-12-10T11:30:01.4296860Z RubyZip 3.0 is coming!
+2022-12-10T11:30:01.4297285Z **********************
+2022-12-10T11:30:01.4297478Z 
+2022-12-10T11:30:01.4297711Z The public API of some Rubyzip classes has been modernized to use named
+2022-12-10T11:30:01.4298120Z parameters for optional arguments. Please check your usage of the
+2022-12-10T11:30:01.4298456Z following classes:
+2022-12-10T11:30:01.4313597Z   * `Zip::File`
+2022-12-10T11:30:01.4314648Z   * `Zip::Entry`
+2022-12-10T11:30:01.4315012Z   * `Zip::InputStream`
+2022-12-10T11:30:01.4315223Z   * `Zip::OutputStream`
+2022-12-10T11:30:01.4315354Z 
+2022-12-10T11:30:01.4315526Z Please ensure that your Gemfiles and .gemspecs are suitably restrictive
+2022-12-10T11:30:01.4315869Z to avoid an unexpected breakage when 3.0 is released (e.g. ~> 2.3.0).
+2022-12-10T11:30:01.4316228Z See https://github.com/rubyzip/rubyzip for details. The Changelog also
+2022-12-10T11:30:01.4316587Z lists other enhancements and bugfixes that have been implemented since
+2022-12-10T11:30:01.4316844Z version 2.3.0.
+2022-12-10T11:30:01.4582524Z Saving cache
+2022-12-10T11:30:01.4726163Z [command]/usr/bin/tar --posix --use-compress-program zstdmt -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/opensource.guide/opensource.guide --files-from manifest.txt
+2022-12-10T11:30:04.8634157Z Cache Size: ~32 MB (33665226 B)
+2022-12-10T11:30:05.2644680Z Cache saved successfully
+2022-12-10T11:30:05.2704139Z Took  44.53 seconds
+2022-12-10T11:30:05.2705933Z ##[endgroup]
+2022-12-10T11:30:05.2833600Z ##[group]Run actions/setup-node@v3
+2022-12-10T11:30:05.2833827Z with:
+2022-12-10T11:30:05.2834009Z   always-auth: false
+2022-12-10T11:30:05.2834206Z   check-latest: false
+2022-12-10T11:30:05.2834513Z   token: ***
+2022-12-10T11:30:05.2834690Z ##[endgroup]
+2022-12-10T11:30:05.4837057Z ##[group]Environment details
+2022-12-10T11:30:06.0836686Z node: v16.18.1
+2022-12-10T11:30:06.0837148Z 
+2022-12-10T11:30:06.9596916Z yarn: 1.22.19
+2022-12-10T11:30:06.9597092Z 
+2022-12-10T11:30:08.9358593Z npm: 8.19.2
+2022-12-10T11:30:08.9358767Z 
+2022-12-10T11:30:08.9359993Z ##[endgroup]
+2022-12-10T11:30:08.9479893Z ##[group]Run script/bootstrap
+2022-12-10T11:30:08.9480231Z [36;1mscript/bootstrap[0m
+2022-12-10T11:30:08.9537033Z shell: /usr/bin/bash -e {0}
+2022-12-10T11:30:08.9537408Z env:
+2022-12-10T11:30:08.9537633Z   SKIP_BUNDLER: true
+2022-12-10T11:30:08.9537901Z ##[endgroup]
+2022-12-10T11:30:08.9731298Z ==> Installing node dependencies…
+2022-12-10T11:30:10.3959731Z npm WARN old lockfile 
+2022-12-10T11:30:10.3963311Z npm WARN old lockfile The package-lock.json file was created with an old version of npm,
+2022-12-10T11:30:10.3966568Z npm WARN old lockfile so supplemental metadata must be fetched from the registry.
+2022-12-10T11:30:10.3969098Z npm WARN old lockfile 
+2022-12-10T11:30:10.3975048Z npm WARN old lockfile This is a one-time fix-up, please be patient...
+2022-12-10T11:30:10.3975454Z npm WARN old lockfile 
+2022-12-10T11:30:14.6509133Z 
+2022-12-10T11:30:14.6509894Z > postinstall
+2022-12-10T11:30:14.6510289Z > cd test && npm install
+2022-12-10T11:30:14.6510465Z 
+2022-12-10T11:30:55.7044019Z 
+2022-12-10T11:30:55.7044874Z added 178 packages, and audited 179 packages in 41s
+2022-12-10T11:30:55.7046548Z 
+2022-12-10T11:30:55.7047024Z 87 packages are looking for funding
+2022-12-10T11:30:55.7047546Z   run `npm fund` for details
+2022-12-10T11:30:55.7072834Z 
+2022-12-10T11:30:55.7073382Z 6 high severity vulnerabilities
+2022-12-10T11:30:55.7073902Z 
+2022-12-10T11:30:55.7074533Z To address issues that do not require attention, run:
+2022-12-10T11:30:55.7074933Z   npm audit fix
+2022-12-10T11:30:55.7075127Z 
+2022-12-10T11:30:55.7075361Z To address all issues (including breaking changes), run:
+2022-12-10T11:30:55.7076002Z   npm audit fix --force
+2022-12-10T11:30:55.7076172Z 
+2022-12-10T11:30:55.7076347Z Run `npm audit` for details.
+2022-12-10T11:30:55.7200896Z 
+2022-12-10T11:30:55.7201590Z up to date, audited 33 packages in 47s
+2022-12-10T11:30:55.7208247Z 
+2022-12-10T11:30:55.7208580Z found 0 vulnerabilities
+2022-12-10T11:30:55.7326807Z ##[group]Run script/test
+2022-12-10T11:30:55.7327114Z [36;1mscript/test[0m
+2022-12-10T11:30:55.7379085Z shell: /usr/bin/bash -e {0}
+2022-12-10T11:30:55.7379336Z ##[endgroup]
+2022-12-10T11:30:55.7477289Z ==> Building the site…
+2022-12-10T11:30:56.3734119Z Configuration file: _config.yml
+2022-12-10T11:30:56.3734751Z Configuration file: test/_config.yml
+2022-12-10T11:30:56.4647007Z To use retry middleware with Faraday v2.0+, install `faraday-retry` gem
+2022-12-10T11:30:56.7415317Z [33m   GitHub Metadata: No GitHub API authentication could be found. Some fields may be missing or have incorrect data.[0m
+2022-12-10T11:31:05.1333907Z             Source: /home/runner/work/opensource.guide/opensource.guide
+2022-12-10T11:31:05.1334414Z        Destination: /home/runner/work/opensource.guide/opensource.guide/_site
+2022-12-10T11:31:05.1335084Z  Incremental build: disabled. Enable with --incremental
+2022-12-10T11:31:05.1335705Z       Generating... 
+2022-12-10T11:31:12.8822286Z WARNING: .columns, .column, .one-third, .two-thirds, .one-fourth, .one-half, .three-fourths, .one-fifth, .four-fifths, .centered will be deprecated in 12.0.0 please migrate to grid.scss
+2022-12-10T11:31:12.8823481Z          on line 6 of /home/runner/work/opensource.guide/opensource.guide/node_modules/primer-layout/lib/columns.scss
+2022-12-10T11:31:12.8824466Z          from line 3 of /home/runner/work/opensource.guide/opensource.guide/node_modules/primer-layout/index.scss
+2022-12-10T11:31:12.8825517Z          from line 23 of /home/runner/work/opensource.guide/opensource.guide/node_modules/primer-core/index.scss
+2022-12-10T11:31:12.8861769Z          from line 4 of an unknown file
+2022-12-10T11:31:12.8862396Z 
+2022-12-10T11:31:17.9583093Z                     done in 12.825 seconds.
+2022-12-10T11:31:17.9583691Z  Auto-regeneration: disabled. Use --watch to enable.
+2022-12-10T11:31:19.1776047Z Configuration file: /home/runner/work/opensource.guide/opensource.guide/_config.yml
+2022-12-10T11:31:19.1776651Z Run options: --seed 50290
+2022-12-10T11:31:19.1776805Z 
+2022-12-10T11:31:19.1777374Z # Running:
+2022-12-10T11:31:19.1777490Z 
+2022-12-10T11:31:19.2722030Z .........................................................................................................................................................................................................
+2022-12-10T11:31:19.2722480Z 
+2022-12-10T11:31:19.2722954Z Finished in 0.091656s, 2192.9725 runs/s, 17740.1656 assertions/s.
+2022-12-10T11:31:19.2723548Z 
+2022-12-10T11:31:19.2723941Z 201 runs, 1626 assertions, 0 failures, 0 errors, 0 skips
+2022-12-10T11:31:19.7032523Z Running ["ScriptCheck", "OpenGraphCheck", "LinkCheck", "ImageCheck", "HtmlCheck"] on ["_site"] on *.html... 
+2022-12-10T11:31:19.7033173Z 
+2022-12-10T11:31:19.7033590Z 
+2022-12-10T11:31:25.3460152Z Checking 449 external links...
+2022-12-10T11:32:19.6787198Z Ran on 244 files!
+2022-12-10T11:32:19.6787518Z 
+2022-12-10T11:32:19.6787603Z 
+2022-12-10T11:32:19.6788144Z HTML-Proofer finished successfully.
+2022-12-10T11:32:28.5946722Z _articles/best-practices.md: no issues found
+2022-12-10T11:32:28.5947319Z _articles/building-community.md: no issues found
+2022-12-10T11:32:28.5947796Z _articles/code-of-conduct.md: no issues found
+2022-12-10T11:32:28.5948270Z _articles/de/best-practices.md: no issues found
+2022-12-10T11:32:28.5948749Z _articles/de/building-community.md: no issues found
+2022-12-10T11:32:28.5949226Z _articles/de/code-of-conduct.md: no issues found
+2022-12-10T11:32:28.5949703Z _articles/de/finding-users.md: no issues found
+2022-12-10T11:32:28.5950177Z _articles/de/getting-paid.md: no issues found
+2022-12-10T11:32:28.5950655Z _articles/de/how-to-contribute.md: no issues found
+2022-12-10T11:32:28.5951172Z _articles/de/leadership-and-governance.md: no issues found
+2022-12-10T11:32:28.5951590Z _articles/de/legal.md: no issues found
+2022-12-10T11:32:28.5951970Z _articles/de/metrics.md: no issues found
+2022-12-10T11:32:28.5952443Z _articles/de/starting-a-project.md: no issues found
+2022-12-10T11:32:28.5953234Z _articles/el/best-practices.md: no issues found
+2022-12-10T11:32:28.5953732Z _articles/el/building-community.md: no issues found
+2022-12-10T11:32:28.5954209Z _articles/el/code-of-conduct.md: no issues found
+2022-12-10T11:32:28.5954670Z _articles/el/finding-users.md: no issues found
+2022-12-10T11:32:28.5955128Z _articles/el/getting-paid.md: no issues found
+2022-12-10T11:32:28.5955601Z _articles/el/how-to-contribute.md: no issues found
+2022-12-10T11:32:28.5956105Z _articles/el/leadership-and-governance.md: no issues found
+2022-12-10T11:32:28.5956613Z _articles/el/legal.md: no issues found
+2022-12-10T11:32:28.5956990Z _articles/el/metrics.md: no issues found
+2022-12-10T11:32:28.5957460Z _articles/el/starting-a-project.md: no issues found
+2022-12-10T11:32:28.5957931Z _articles/es/best-practices.md: no issues found
+2022-12-10T11:32:28.5958397Z _articles/es/building-community.md: no issues found
+2022-12-10T11:32:28.5958872Z _articles/es/code-of-conduct.md: no issues found
+2022-12-10T11:32:28.5959339Z _articles/es/finding-users.md: no issues found
+2022-12-10T11:32:28.5959798Z _articles/es/getting-paid.md: no issues found
+2022-12-10T11:32:28.5960375Z _articles/es/how-to-contribute.md: no issues found
+2022-12-10T11:32:28.5960890Z _articles/es/leadership-and-governance.md: no issues found
+2022-12-10T11:32:28.5961292Z _articles/es/legal.md: no issues found
+2022-12-10T11:32:28.5961666Z _articles/es/metrics.md: no issues found
+2022-12-10T11:32:28.5962124Z _articles/es/starting-a-project.md: no issues found
+2022-12-10T11:32:28.5962602Z _articles/fa/best-practices.md: no issues found
+2022-12-10T11:32:28.5963083Z _articles/fa/building-community.md: no issues found
+2022-12-10T11:32:28.5963550Z _articles/fa/code-of-conduct.md: no issues found
+2022-12-10T11:32:28.5964012Z _articles/fa/finding-users.md: no issues found
+2022-12-10T11:32:28.5964463Z _articles/fa/getting-paid.md: no issues found
+2022-12-10T11:32:28.5964930Z _articles/fa/how-to-contribute.md: no issues found
+2022-12-10T11:32:28.5965445Z _articles/fa/leadership-and-governance.md: no issues found
+2022-12-10T11:32:28.5965844Z _articles/fa/legal.md: no issues found
+2022-12-10T11:32:28.5966210Z _articles/fa/metrics.md: no issues found
+2022-12-10T11:32:28.5966681Z _articles/fa/starting-a-project.md: no issues found
+2022-12-10T11:32:28.5967142Z _articles/finding-users.md: no issues found
+2022-12-10T11:32:28.5967606Z _articles/fr/best-practices.md: no issues found
+2022-12-10T11:32:28.5968070Z _articles/fr/building-community.md: no issues found
+2022-12-10T11:32:28.5968536Z _articles/fr/code-of-conduct.md: no issues found
+2022-12-10T11:32:28.5968999Z _articles/fr/finding-users.md: no issues found
+2022-12-10T11:32:28.5969449Z _articles/fr/getting-paid.md: no issues found
+2022-12-10T11:32:28.5969914Z _articles/fr/how-to-contribute.md: no issues found
+2022-12-10T11:32:28.5970416Z _articles/fr/leadership-and-governance.md: no issues found
+2022-12-10T11:32:28.5970818Z _articles/fr/legal.md: no issues found
+2022-12-10T11:32:28.5971188Z _articles/fr/metrics.md: no issues found
+2022-12-10T11:32:28.5971652Z _articles/fr/starting-a-project.md: no issues found
+2022-12-10T11:32:28.5972108Z _articles/getting-paid.md: no issues found
+2022-12-10T11:32:28.5972554Z _articles/how-to-contribute.md: no issues found
+2022-12-10T11:32:28.5973009Z _articles/hu/best-practices.md: no issues found
+2022-12-10T11:32:28.5973481Z _articles/hu/building-community.md: no issues found
+2022-12-10T11:32:28.5973958Z _articles/hu/code-of-conduct.md: no issues found
+2022-12-10T11:32:28.5974424Z _articles/hu/finding-users.md: no issues found
+2022-12-10T11:32:28.5974874Z _articles/hu/getting-paid.md: no issues found
+2022-12-10T11:32:28.5975347Z _articles/hu/how-to-contribute.md: no issues found
+2022-12-10T11:32:28.5975857Z _articles/hu/leadership-and-governance.md: no issues found
+2022-12-10T11:32:28.5976258Z _articles/hu/legal.md: no issues found
+2022-12-10T11:32:28.5976623Z _articles/hu/metrics.md: no issues found
+2022-12-10T11:32:28.5977075Z _articles/hu/starting-a-project.md: no issues found
+2022-12-10T11:32:28.5977649Z _articles/id/best-practices.md: no issues found
+2022-12-10T11:32:28.5978145Z _articles/id/building-community.md: no issues found
+2022-12-10T11:32:28.5978620Z _articles/id/code-of-conduct.md: no issues found
+2022-12-10T11:32:28.5979083Z _articles/id/finding-users.md: no issues found
+2022-12-10T11:32:28.5979526Z _articles/id/getting-paid.md: no issues found
+2022-12-10T11:32:28.5979996Z _articles/id/how-to-contribute.md: no issues found
+2022-12-10T11:32:28.5980514Z _articles/id/leadership-and-governance.md: no issues found
+2022-12-10T11:32:28.5980990Z _articles/id/legal.md: no issues found
+2022-12-10T11:32:28.5981374Z _articles/id/metrics.md: no issues found
+2022-12-10T11:32:28.5981839Z _articles/id/starting-a-project.md: no issues found
+2022-12-10T11:32:28.5982303Z _articles/ja/best-practices.md: no issues found
+2022-12-10T11:32:28.5982773Z _articles/ja/building-community.md: no issues found
+2022-12-10T11:32:28.5983242Z _articles/ja/code-of-conduct.md: no issues found
+2022-12-10T11:32:28.5983704Z _articles/ja/finding-users.md: no issues found
+2022-12-10T11:32:28.5984168Z _articles/ja/getting-paid.md: no issues found
+2022-12-10T11:32:28.5984626Z _articles/ja/how-to-contribute.md: no issues found
+2022-12-10T11:32:28.5985137Z _articles/ja/leadership-and-governance.md: no issues found
+2022-12-10T11:32:28.5985539Z _articles/ja/legal.md: no issues found
+2022-12-10T11:32:28.5985912Z _articles/ja/metrics.md: no issues found
+2022-12-10T11:32:28.5986328Z _articles/ja/starting-a-project.md: no issues found
+2022-12-10T11:32:28.5986794Z _articles/ko/best-practices.md: no issues found
+2022-12-10T11:32:28.5987276Z _articles/ko/building-community.md: no issues found
+2022-12-10T11:32:28.5987750Z _articles/ko/code-of-conduct.md: no issues found
+2022-12-10T11:32:28.5988209Z _articles/ko/finding-users.md: no issues found
+2022-12-10T11:32:28.5988661Z _articles/ko/getting-paid.md: no issues found
+2022-12-10T11:32:28.5989120Z _articles/ko/how-to-contribute.md: no issues found
+2022-12-10T11:32:28.5989629Z _articles/ko/leadership-and-governance.md: no issues found
+2022-12-10T11:32:28.5990030Z _articles/ko/legal.md: no issues found
+2022-12-10T11:32:28.5990397Z _articles/ko/metrics.md: no issues found
+2022-12-10T11:32:28.5990859Z _articles/ko/starting-a-project.md: no issues found
+2022-12-10T11:32:28.5991352Z _articles/leadership-and-governance.md: no issues found
+2022-12-10T11:32:28.5991754Z _articles/legal.md: no issues found
+2022-12-10T11:32:28.5992123Z _articles/metrics.md: no issues found
+2022-12-10T11:32:28.5992575Z _articles/ms/best-practices.md: no issues found
+2022-12-10T11:32:28.5993049Z _articles/ms/building-community.md: no issues found
+2022-12-10T11:32:28.5993510Z _articles/ms/code-of-conduct.md: no issues found
+2022-12-10T11:32:28.5993974Z _articles/ms/finding-users.md: no issues found
+2022-12-10T11:32:28.5994425Z _articles/ms/getting-paid.md: no issues found
+2022-12-10T11:32:28.5994898Z _articles/ms/how-to-contribute.md: no issues found
+2022-12-10T11:32:28.5995406Z _articles/ms/leadership-and-governance.md: no issues found
+2022-12-10T11:32:28.5995802Z _articles/ms/legal.md: no issues found
+2022-12-10T11:32:28.5996172Z _articles/ms/metrics.md: no issues found
+2022-12-10T11:32:28.5996634Z _articles/ms/starting-a-project.md: no issues found
+2022-12-10T11:32:28.5997112Z _articles/nl/best-practices.md: no issues found
+2022-12-10T11:32:28.5997583Z _articles/nl/building-community.md: no issues found
+2022-12-10T11:32:28.5998052Z _articles/nl/code-of-conduct.md: no issues found
+2022-12-10T11:32:28.5998506Z _articles/nl/finding-users.md: no issues found
+2022-12-10T11:32:28.5998962Z _articles/nl/getting-paid.md: no issues found
+2022-12-10T11:32:28.5999429Z _articles/nl/how-to-contribute.md: no issues found
+2022-12-10T11:32:28.5999938Z _articles/nl/leadership-and-governance.md: no issues found
+2022-12-10T11:32:28.6000547Z _articles/nl/legal.md: no issues found
+2022-12-10T11:32:28.6001101Z _articles/nl/metrics.md: no issues found
+2022-12-10T11:32:28.6001820Z _articles/nl/starting-a-project.md: no issues found
+2022-12-10T11:32:28.6002568Z _articles/pl/best-practices.md: no issues found
+2022-12-10T11:32:28.6003251Z _articles/pl/building-community.md: no issues found
+2022-12-10T11:32:28.6003909Z _articles/pl/code-of-conduct.md: no issues found
+2022-12-10T11:32:28.6004535Z _articles/pl/finding-users.md: no issues found
+2022-12-10T11:32:28.6005167Z _articles/pl/getting-paid.md: no issues found
+2022-12-10T11:32:28.6005813Z _articles/pl/how-to-contribute.md: no issues found
+2022-12-10T11:32:28.6006496Z _articles/pl/leadership-and-governance.md: no issues found
+2022-12-10T11:32:28.6007080Z _articles/pl/legal.md: no issues found
+2022-12-10T11:32:28.6007912Z _articles/pl/metrics.md: no issues found
+2022-12-10T11:32:28.6009810Z _articles/pl/starting-a-project.md: no issues found
+2022-12-10T11:32:28.6010722Z _articles/pt/best-practices.md: no issues found
+2022-12-10T11:32:28.6020919Z _articles/pt/building-community.md: no issues found
+2022-12-10T11:32:28.6021864Z _articles/pt/code-of-conduct.md: no issues found
+2022-12-10T11:32:28.6022520Z _articles/pt/finding-users.md: no issues found
+2022-12-10T11:32:28.6023164Z _articles/pt/getting-paid.md: no issues found
+2022-12-10T11:32:28.6023812Z _articles/pt/how-to-contribute.md: no issues found
+2022-12-10T11:32:28.6024504Z _articles/pt/leadership-and-governance.md: no issues found
+2022-12-10T11:32:28.6025007Z _articles/pt/legal.md: no issues found
+2022-12-10T11:32:28.6025545Z _articles/pt/metrics.md: no issues found
+2022-12-10T11:32:28.6026273Z _articles/pt/starting-a-project.md: no issues found
+2022-12-10T11:32:28.6026927Z _articles/ro/best-practices.md: no issues found
+2022-12-10T11:32:28.6027570Z _articles/ro/building-community.md: no issues found
+2022-12-10T11:32:28.6028217Z _articles/ro/code-of-conduct.md: no issues found
+2022-12-10T11:32:28.6028838Z _articles/ro/finding-users.md: no issues found
+2022-12-10T11:32:28.6029467Z _articles/ro/getting-paid.md: no issues found
+2022-12-10T11:32:28.6030105Z _articles/ro/how-to-contribute.md: no issues found
+2022-12-10T11:32:28.6030791Z _articles/ro/leadership-and-governance.md: no issues found
+2022-12-10T11:32:28.6031283Z _articles/ro/legal.md: no issues found
+2022-12-10T11:32:28.6031821Z _articles/ro/metrics.md: no issues found
+2022-12-10T11:32:28.6032528Z _articles/ro/starting-a-project.md: no issues found
+2022-12-10T11:32:28.6033172Z _articles/ru/best-practices.md: no issues found
+2022-12-10T11:32:28.6033808Z _articles/ru/building-community.md: no issues found
+2022-12-10T11:32:28.6034451Z _articles/ru/code-of-conduct.md: no issues found
+2022-12-10T11:32:28.6035127Z _articles/ru/finding-users.md: no issues found
+2022-12-10T11:32:28.6035750Z _articles/ru/getting-paid.md: no issues found
+2022-12-10T11:32:28.6036395Z _articles/ru/how-to-contribute.md: no issues found
+2022-12-10T11:32:28.6037086Z _articles/ru/leadership-and-governance.md: no issues found
+2022-12-10T11:32:28.6037589Z _articles/ru/legal.md: no issues found
+2022-12-10T11:32:28.6038297Z _articles/ru/metrics.md: no issues found
+2022-12-10T11:32:28.6039007Z _articles/ru/starting-a-project.md: no issues found
+2022-12-10T11:32:28.6039667Z _articles/starting-a-project.md: no issues found
+2022-12-10T11:32:28.6040402Z _articles/ta/best-practices.md: no issues found
+2022-12-10T11:32:28.6041056Z _articles/ta/building-community.md: no issues found
+2022-12-10T11:32:28.6041688Z _articles/ta/code-of-conduct.md: no issues found
+2022-12-10T11:32:28.6042311Z _articles/ta/finding-users.md: no issues found
+2022-12-10T11:32:28.6042940Z _articles/ta/getting-paid.md: no issues found
+2022-12-10T11:32:28.6043581Z _articles/ta/how-to-contribute.md: no issues found
+2022-12-10T11:32:28.6044271Z _articles/ta/leadership-and-governance.md: no issues found
+2022-12-10T11:32:28.6044769Z _articles/ta/legal.md: no issues found
+2022-12-10T11:32:28.6045299Z _articles/ta/metrics.md: no issues found
+2022-12-10T11:32:28.6046008Z _articles/ta/starting-a-project.md: no issues found
+2022-12-10T11:32:28.6046641Z _articles/tr/best-practices.md: no issues found
+2022-12-10T11:32:28.6047285Z _articles/tr/building-community.md: no issues found
+2022-12-10T11:32:28.6048110Z _articles/tr/code-of-conduct.md: no issues found
+2022-12-10T11:32:28.6048760Z _articles/tr/finding-users.md: no issues found
+2022-12-10T11:32:28.6049386Z _articles/tr/getting-paid.md: no issues found
+2022-12-10T11:32:28.6050024Z _articles/tr/how-to-contribute.md: no issues found
+2022-12-10T11:32:28.6050706Z _articles/tr/leadership-and-governance.md: no issues found
+2022-12-10T11:32:28.6051200Z _articles/tr/legal.md: no issues found
+2022-12-10T11:32:28.6051734Z _articles/tr/metrics.md: no issues found
+2022-12-10T11:32:28.6052529Z _articles/tr/starting-a-project.md: no issues found
+2022-12-10T11:32:28.6053200Z _articles/zh-hans/best-practices.md: no issues found
+2022-12-10T11:32:28.6053888Z _articles/zh-hans/building-community.md: no issues found
+2022-12-10T11:32:28.6054563Z _articles/zh-hans/code-of-conduct.md: no issues found
+2022-12-10T11:32:28.6055224Z _articles/zh-hans/finding-users.md: no issues found
+2022-12-10T11:32:28.6055867Z _articles/zh-hans/getting-paid.md: no issues found
+2022-12-10T11:32:28.6056548Z _articles/zh-hans/how-to-contribute.md: no issues found
+2022-12-10T11:32:28.6057264Z _articles/zh-hans/leadership-and-governance.md: no issues found
+2022-12-10T11:32:28.6057919Z _articles/zh-hans/legal.md: no issues found
+2022-12-10T11:32:28.6058543Z _articles/zh-hans/metrics.md: no issues found
+2022-12-10T11:32:28.6059199Z _articles/zh-hans/starting-a-project.md: no issues found
+2022-12-10T11:32:28.6059866Z _articles/zh-hant/best-practices.md: no issues found
+2022-12-10T11:32:28.6060538Z _articles/zh-hant/building-community.md: no issues found
+2022-12-10T11:32:28.6061211Z _articles/zh-hant/code-of-conduct.md: no issues found
+2022-12-10T11:32:28.6061860Z _articles/zh-hant/finding-users.md: no issues found
+2022-12-10T11:32:28.6062495Z _articles/zh-hant/getting-paid.md: no issues found
+2022-12-10T11:32:28.6063168Z _articles/zh-hant/how-to-contribute.md: no issues found
+2022-12-10T11:32:28.6063878Z _articles/zh-hant/leadership-and-governance.md: no issues found
+2022-12-10T11:32:28.6064530Z _articles/zh-hant/legal.md: no issues found
+2022-12-10T11:32:28.6065066Z _articles/zh-hant/metrics.md: no issues found
+2022-12-10T11:32:28.6065710Z _articles/zh-hant/starting-a-project.md: no issues found
+2022-12-10T11:32:28.6482908Z Post job cleanup.
+2022-12-10T11:32:28.8226630Z Post job cleanup.
+2022-12-10T11:32:28.9602147Z [command]/usr/bin/git version
+2022-12-10T11:32:28.9660224Z git version 2.38.1
+2022-12-10T11:32:28.9714930Z Temporarily overriding HOME='/home/runner/work/_temp/9ce7ef1d-dcce-4ad8-8163-b220a588c765' before making global git config changes
+2022-12-10T11:32:28.9718850Z Adding repository directory to the temporary git global config as a safe directory
+2022-12-10T11:32:28.9725961Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/opensource.guide/opensource.guide
+2022-12-10T11:32:28.9780383Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2022-12-10T11:32:28.9822783Z [command]/usr/bin/git submodule foreach --recursive git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :
+2022-12-10T11:32:29.0064332Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2022-12-10T11:32:29.0091949Z http.https://github.com/.extraheader
+2022-12-10T11:32:29.0110926Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2022-12-10T11:32:29.0152543Z [command]/usr/bin/git submodule foreach --recursive git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :
+2022-12-10T11:32:29.0820642Z Cleaning up orphan processes
